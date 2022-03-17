@@ -14,17 +14,6 @@ It includes the following blocks:
 * HDBSCAN clustering using precomputed distance matrix
 * Classification of new data based on database of labeled clusters
 
-## Prerequisites
-
-`CASA` requires the following packages for installation:
-
-* numpy
-* pandas
-* scipy
-* sklearn
-* dask
-* seaborn
-
 ## Installation
 
     pip install casa

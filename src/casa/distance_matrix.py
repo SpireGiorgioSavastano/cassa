@@ -7,9 +7,6 @@ from scipy.spatial.distance import cdist
 
 logger = logging.getLogger("casa-classification")
 
-# from dask.distributed import Client
-# client = Client(n_workers=4)
-
 
 def compute_earth_mover_dist(first, second):
     """
