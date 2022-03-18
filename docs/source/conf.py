@@ -18,12 +18,12 @@ sys.path.insert(0, os.path.abspath("."))
 sys.path.insert(0, os.path.abspath(".."))
 sys.path.insert(0, os.path.abspath("../.."))
 sys.path.insert(0, os.path.abspath("../../src"))
-sys.path.insert(0, os.path.abspath("../../src/magcoordpy"))
+sys.path.insert(0, os.path.abspath("../../src/cassa"))
 
 
 # -- Project information -----------------------------------------------------
 
-project = "magcoordpy"
+project = "cassa"
 copyright = "2022, Giorgio Savastano"
 author = "Giorgio Savastano"
 
