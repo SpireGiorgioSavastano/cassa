@@ -7,11 +7,10 @@
 ## Overview
 
 `CASSA` is a Python package to perform unsupervised and semi-supervised machine learning (ML) classification algorithms on generic tensors of pre-processed data, such as time series, altitude profiles, images, DDMs and spectra. Mainly tested on Earth Information (EI) data produced by our own satellites, such as GNSS-RO sTEC profiles and GNSS-R DDMs. It produces a database of labeled clusters that can be used to classify new unlabeled data.
+The documentation is available at <https://cassa.readthedocs.io/en/latest/>.
 
 It includes the following blocks:
 
-* Compute wavelet spectra of 1-D data tensors (e.g., time series, altitude profiles)
-* Downsampling of input 2-D data tensors (e.g., images, DDMs)
 * Parallelized distance matrix computation using earth mover's distance (EMD, aka Wasserstein metric)
 * Spetral clustering using precomputed distance matrix
 * Self-tuned spectral clustering using precomputed distance matrix
