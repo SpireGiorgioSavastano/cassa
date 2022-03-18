@@ -30,18 +30,14 @@ def compute_earth_mover_dist(first, second):
     return emd_val
 
 
-def compute_distance_matrix(matrix_arrays, num_part=-1):
+def compute_distance_matrix(matrix_arrays):
     """Compute distance matrix.
-
-    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
 
     Parameters
     ----------
     matrix_arrays : np.ndarray
         Matrix of data tensors stored in arrays.
         Only 1-D or 2-D data tensors allowed
-    num_part : int, optional
-        Number of partitions for Dask bags.
 
     """
     # Get indices for the upper-triangle of matrix array
@@ -78,8 +74,6 @@ def compute_distance_matrix(matrix_arrays, num_part=-1):
 
 def compute_distance_matrix_dask(matrix_arrays, num_part=-1):
     """Compute distance matrix using Dask.
-
-    Author: Giorgio Savastano (giorgiosavastano@gmail.com)
 
     Parameters
     ----------

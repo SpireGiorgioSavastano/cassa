@@ -24,8 +24,8 @@ sys.path.insert(0, os.path.abspath("../../src/cassa"))
 # -- Project information -----------------------------------------------------
 
 project = "cassa"
-copyright = "2022, Giorgio Savastano"
-author = "Giorgio Savastano"
+copyright = "2022, Karl Nordstrom, Giorgio Savastano"
+author = "Karl Nordstrom, Giorgio Savastano"
 
 # The full version, including alpha/beta/rc tags
 release = "1.0.0"
