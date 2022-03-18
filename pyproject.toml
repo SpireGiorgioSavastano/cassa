@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cassa"
-version = "0.2.1"
+version = "0.2.2"
 description = "Python package to perform unsupervised and semi-supervised machine learning (ML) classification algorithms on generic tensors of pre-processed data"
 authors = ["Giorgio Savastano <giorgiosavastano@gmail.com>"]
 license = "MIT"
