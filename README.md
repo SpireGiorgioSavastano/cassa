@@ -1,5 +1,9 @@
 # Classification with Automated Semi-Supervised Algorithms (CASSA) package
 
+![test-main](https://github.com/giorgiosavastano/cassa/actions/workflows/python-test-main.yml/badge.svg)
+![coverage-main](https://img.shields.io/codecov/c/github/giorgiosavastano/cassa)
+![license](https://img.shields.io/github/license/giorgiosavastano/cassa)
+
 ## Overview
 
 `CASSA` is a Python package to perform unsupervised and semi-supervised machine learning (ML) classification algorithms on generic tensors of pre-processed data, such as time series, altitude profiles, images, DDMs and spectra. Mainly tested on Earth Information (EI) data produced by our own satellites, such as GNSS-RO sTEC profiles and GNSS-R DDMs. It produces a database of labeled clusters that can be used to classify new unlabeled data.

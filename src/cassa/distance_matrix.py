@@ -5,17 +5,19 @@ import numpy as np
 from scipy.optimize import linear_sum_assignment
 from scipy.spatial.distance import cdist
 
-logger = logging.getLogger("casa-classification")
+logger = logging.getLogger("cassa-classification")
 
 
 def compute_earth_mover_dist(first, second):
     """
-    Compute single entry of the distance matrix.
+    Compute earth's mover distance (EMD) between two data tensors.
 
     Parameters
     ----------
-    inds : tuple
-        Indexes of the first and second arrays
+    first : np.ndarray
+        First data array
+    second : np.ndarray
+        Second data array
 
     Returns
     ----------
