@@ -4,7 +4,7 @@ from unittest import TestCase
 import numpy as np
 import pytest
 
-from casa.distance_matrix import compute_distance_matrix
+from cassa.distance_matrix import compute_distance_matrix
 
 path = Path(__file__)
 
