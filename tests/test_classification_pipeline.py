@@ -4,6 +4,7 @@ from unittest import TestCase
 import numpy as np
 import pytest
 
+from cassa.classification_pipeline import get_affinity_matrix
 from cassa.distance_matrix import compute_distance_matrix, compute_distance_matrix_dask
 
 path = Path(__file__)
@@ -22,6 +23,8 @@ class TestDistMatrix(TestCase):
         dist_matr_dask = compute_distance_matrix_dask(matrix_arrays, num_part=10)
         self.assertTrue((dist_matr == dist_matr_dask).all())
 
+        aff_matrix = get_affinity_matrix(dist_matr)
+        self.assertEqual(aff_matrix.shape, dist_matr.shape)
 
     def tearDown(self):
         pass

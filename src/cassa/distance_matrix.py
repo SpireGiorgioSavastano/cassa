@@ -5,7 +5,7 @@ import numpy as np
 from scipy.optimize import linear_sum_assignment
 from scipy.spatial.distance import cdist
 
-logger = logging.getLogger("cassa-classification")
+logger = logging.getLogger("cassa-distance-matrix")
 
 
 def compute_earth_mover_dist(first, second):
