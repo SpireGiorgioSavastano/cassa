@@ -21,6 +21,9 @@ Functions
 :doc:`distance_matrix`
     Documentation for distance matrix functions
 
+:doc:`classification_pipeline`
+    Documentation for classification functions
+
 
 Authors
 -------
