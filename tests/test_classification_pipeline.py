@@ -9,7 +9,10 @@ from cassa.classification_pipeline import (
     get_affinity_matrix,
     get_clusters_spectral,
 )
-from cassa.distance_matrix import compute_distance_matrix
+from cassa.distance_matrix import (
+    compute_distance_matrix,
+    compute_distance_matrix_chunked,
+)
 
 path = Path(__file__)
 
@@ -34,6 +37,14 @@ class TestDistMatrix(TestCase):
             dist_matr, ncl=n_cl, self_tuned=True
         )
         self.assertEqual(len(l_labels), len(cl_colors))
+
+    @pytest.mark.unit
+    def test_distance_matrix_chunked(self):
+        matrix_arrays = np.random.random((100, 10, 50))
+        dist_matr_1 = compute_distance_matrix(matrix_arrays)
+        dist_matr_2 = compute_distance_matrix_chunked(matrix_arrays)
+
+        self.assertTrue((dist_matr_1 == dist_matr_2).all())
 
     def tearDown(self):
         pass
