@@ -9,10 +9,7 @@ from cassa.classification_pipeline import (
     get_affinity_matrix,
     get_clusters_spectral,
 )
-from cassa.distance_matrix import (
-    compute_distance_matrix,
-    compute_distance_matrix_chunked,
-)
+from cassa.distance_matrix import DistanceMatrix
 
 path = Path(__file__)
 
@@ -23,8 +20,9 @@ class TestDistMatrix(TestCase):
 
     @pytest.mark.unit
     def test_distance_matrix(self):
-        matrix_arrays = np.random.random((100, 10, 50))
-        dist_matr = compute_distance_matrix(matrix_arrays)
+        matrix_arrays = np.random.random((1000, 10, 50))
+        dmatrix = DistanceMatrix(matrix_arrays)
+        dist_matr = dmatrix.compute_distance_matrix(parallel=True)
         self.assertEqual(matrix_arrays.shape[0], dist_matr.shape[0])
 
         aff_matrix = get_affinity_matrix(dist_matr)
@@ -39,10 +37,12 @@ class TestDistMatrix(TestCase):
         self.assertEqual(len(l_labels), len(cl_colors))
 
     @pytest.mark.unit
-    def test_distance_matrix_chunked(self):
+    def test_distance_matrix_parallel(self):
         matrix_arrays = np.random.random((100, 10, 50))
-        dist_matr_1 = compute_distance_matrix(matrix_arrays)
-        dist_matr_2 = compute_distance_matrix_chunked(matrix_arrays)
+        dmatrix = DistanceMatrix(matrix_arrays)
+
+        dist_matr_1 = dmatrix.compute_distance_matrix(parallel=True)
+        dist_matr_2 = dmatrix.compute_distance_matrix(parallel=False)
 
         self.assertTrue((dist_matr_1 == dist_matr_2).all())
 
